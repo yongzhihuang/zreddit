@@ -1,0 +1,49 @@
+/* app css stylesheet */
+body {
+  width: 100%;
+}
+
+.wrapper {
+  background: white;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.post-title {
+  font-family: Verdana;
+  font-size: 10pt;
+  color: black;
+  text-decoration: none
+}
+
+.post-meta {
+  font-family: Verdana;
+  font-size: 7pt;
+  color: #828282;
+}
+
+.post {
+  margin-bottom: 5px;
+}
+
+.postlist {
+  margin: 0;
+  padding: 0;
+  background: rgb(246, 246, 239);
+}
+
+.header {
+  background: rgb(255, 102, 0);
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  font-weight: bold;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.filter {
+  margin-left: 20px;
+}
