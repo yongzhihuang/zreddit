@@ -1,4 +1,10 @@
 /* app css stylesheet */
+@media screen and (max-width: 360px){
+  .wrapper {
+    width: 99% !important;
+  }
+}
+
 body {
   width: 100%;
 }
@@ -19,6 +25,16 @@ a:hover {
   width: 80%;
   margin: 0 auto;
   margin-top: 10px;
+}
+
+ul.postlist li {
+  list-style: none;
+}
+
+.post-counter {
+  font-family: Verdana;
+  font-size: 10pt;
+  color: #828282;
 }
 
 .post-title {
