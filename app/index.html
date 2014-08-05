@@ -26,7 +26,7 @@
     <div class="header"><span class="logo">ZReddit</span>Mobile Reddit, Hackernews Style <input class="filter"type="text" ng-model="filterQuery"></div>
     <ol class="postlist">
       <li class="post" ng-repeat="post in postList | filter:filterQuery | orderBy:filterQuery">
-        <a class="post-title" href="{{post.data.permalink}}">{{post.data.title}} ({{post.data.domain}})</a>
+        <a class="post-title" href="{{post.data.permalink}}">{{post.data.title}} (<a href="{{post.data.url}}">{{post.data.domain}}</a>)</a>
         <div class="post-meta">{{post.data.score}} points | by: {{post.data.author}} | {{post.data.num_comments}} Comments </div>
         <!-- <img class="post-image" src="{{post.data.url}}"> -->
       </li>

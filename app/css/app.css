@@ -3,10 +3,22 @@ body {
   width: 100%;
 }
 
+a {
+  font-family: Verdana;
+  font-size: 10pt;
+  color: black;
+  text-decoration: none
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .wrapper {
   background: white;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
+  margin-top: 10px;
 }
 
 .post-title {
@@ -30,12 +42,20 @@ body {
   margin: 0;
   padding: 0;
   background: rgb(246, 246, 239);
+  padding-top: 10px;
+  padding-left: 5px;
 }
 
 .header {
   background: rgb(255, 102, 0);
   margin: 0;
-  padding: 0;
+  padding: 4px;
+  font-family: Verdana;
+  font-size: 13px;
+}
+
+.header input {
+  height: ;
 }
 
 .logo {
