@@ -23,12 +23,21 @@
   <div ng-view></div>
 
   <div class="wrapper" ng-controller="postlist">
-    <div class="header"><span class="logo">ZReddit</span>Mobile Reddit, Hackernews Style <input class="filter"type="text" ng-model="filterQuery"></div>
+    <div class="header"><span class="logo"><a href="/">ZReddit</a></span>
+      <span class="menu">| Gallery | List</span>
+      Mobile Reddit, Hackernews Style
+
+      <select ng-model="selectedOption" ng-controller="subredditList" x-ng-change="update(selectedOption)">
+        <option ng-repeat="sub in subList" value="{{sub}}">
+          {{sub}}
+        </option>
+      </select>
+    </div>
     <ul class="postlist">
       <li class="post" ng-repeat="post in postList | filter:filterQuery | orderBy:filterQuery">
         <span class="post-counter">{{$index + 1}}. </span><a class="post-title" href="{{post.data.url}}">{{post.data.title}} (<a href="{{post.data.url}}">{{post.data.domain}}</a>)</a>
         <div class="post-meta">{{post.data.score}} points | by: {{post.data.author}} | {{post.data.num_comments}} Comments </div>
-        <!-- <img class="post-image" src="{{post.data.url}}"> -->
+        <div class="image-thumbnail" ng-if="post.data.urlcompressed.indexOf('.png') !== -1 || post.data.urlcompressed.indexOf('.jpg') !== -1 || post.data.urlcompressed.indexOf('.gif') !== -1"><a href="{{post.data.url}}" target="_blank"><img class="post-image" src="{{post.data.urlcompressed}}"></a></div>
       </li>
     </ul>
 

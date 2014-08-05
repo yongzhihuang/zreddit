@@ -9,11 +9,13 @@ angular.module('myApp.services', []).
   factory('redditAPIService', function($http) {
   	var redditAPI = {};
 
-  	redditAPI.getPosts = function() {
+  	redditAPI.getPosts = function(subreddit) {
+      var sub = subreddit || 'all';
+
   		return $http({
   			method: 'GET',
   			responseType: 'json',
-  			url: 'http://www.reddit.com/.json?limit=100'
+  			url: 'http://www.reddit.com/r/' + sub + '.json?limit=100'
   		});
   	}
 

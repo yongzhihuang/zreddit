@@ -76,10 +76,18 @@ ul.postlist li {
 
 .logo {
   font-weight: bold;
-  margin-right: 20px;
   margin-left: 5px;
 }
 
 .filter {
   margin-left: 20px;
+}
+
+.image-thumbnail img {
+  max-width: 80%;
+}
+
+.menu {
+  font-weight: bold;
+  margin-right: 13px;
 }
